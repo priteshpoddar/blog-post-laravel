@@ -17,7 +17,7 @@
 		<div class="form-group">
 		<div class="col-xs-10">
 			<label for="description">Blog Description:</label><br>
-			<textarea class="form-control" rows="5" name="blog_description" id="description">
+			<textarea class="form-control" rows="10" name="blog_description" id="description">
 				{{Request::old('blog_description')}}
 			</textarea>
 		</div>
@@ -28,10 +28,8 @@
 		<div class="form-group">
 			<div class="col-xs-10">
 				<label for="image">Blog Image:</label><br>
-				{{-- <form action="demo_form.asp"> --}}
 					<input type="file" name="blog_image" accept="image/*">
 					<br>
-				{{-- </form> --}}
 			</div>
 		</div>
 	</div>

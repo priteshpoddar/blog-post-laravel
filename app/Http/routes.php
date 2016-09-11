@@ -27,3 +27,5 @@ Route::get('/', function () {
 Route::auth();
 
 Route::resource('/home', 'HomeController');
+Route::get('/fetch/image', 'ImageController@index');
+Route::get('/display/image', 'ImageController@show');

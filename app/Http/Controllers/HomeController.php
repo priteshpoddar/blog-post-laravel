@@ -55,4 +55,11 @@ class HomeController extends Controller
         return view('blog.read-blog', ['blog' => $blog]);
     }
 
+    public function destroy($blogId)
+    {
+
+        $blog = Blog::find($blogId)->delete();
+        return \Redirect::to('/home');
+    }
+
 }

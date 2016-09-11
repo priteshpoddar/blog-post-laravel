@@ -8,6 +8,7 @@
 <div class="container">
 	<center>
 		<img src="{!! '/images/'.$blog->blog_image !!}" style="width:50%;height:40%;" alt="Blog Image"/>
+		{{-- <img src="http://placehold.it/600/771796" style="width:50%;height:40%;" alt="Blog Image"/> --}}
 	</center>
 </div><br><br><br>
 <div class="container">

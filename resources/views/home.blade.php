@@ -27,7 +27,7 @@
         {{-- <button class="pull-right btn btn-info" href="{{ url('/home/create') }}">New Blog</button> --}}
         {{-- <a class="pull-right btn btn-info" href="{{ url('/home/create') }}">New Blog</a> --}}
     </div>
-    @if (!empty($blogs))
+    @if (count($blogs) != 0)
     <div id="products" class="row list-group">
         @foreach ($blogs->all() as $blog)
             {{-- {{ $blog }}<br> --}}
@@ -41,8 +41,15 @@
                             {{substr($blog->blog_description, 0, 200).' ....'}}
                         </p>
                         <div class="row">
-                            <div class="col-xs-12 col-md-6">
+                            <div class="col-xs-10 col-md-6">
                                 <a href="{{ url('home/'.$blog->id) }}">Continue Reading ...</a>
+                            </div>
+                            <div class="col-xs-2 col-md-3 pull-right">
+                                <form action="{{'/home/'.$blog->id}}" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <button class="btn btn-danger ">Delete</button>
+                                </form>
                             </div>
                         </div>
                     </div>
